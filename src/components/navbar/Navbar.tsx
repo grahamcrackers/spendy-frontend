@@ -1,6 +1,6 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { useAuth0 } from '../../contexts/auth0-context';
 
 function Navbar() {
     const { isLoading, user, loginWithRedirect, logout, isAuthenticated } = useAuth0();
