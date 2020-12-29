@@ -1,23 +1,15 @@
-import React from 'react'
-import {Link, withRouter} from 'react-router-dom'
-import {useAuth0} from '../../contexts/auth0-context'
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { useAuth0 } from '../../contexts/auth0-context';
 
 function Navbar() {
-    const {
-        isLoading,
-        user,
-        loginWithRedirect,
-        logout,
-        isAuthenticated,
-    } = useAuth0()
+    const { isLoading, user, loginWithRedirect, logout, isAuthenticated } = useAuth0();
 
     return (
         <header>
             <div className="container-fluid position-relative no-side-padding">
                 <span className="logo">
-                    {user && user.picture && (
-                        <img src={user.picture} alt="My Avatar" />
-                    )}
+                    {user && user.picture && <img src={user.picture} alt="My Avatar" />}
                     {!user && (
                         <img
                             src={
@@ -43,10 +35,7 @@ function Navbar() {
                         <Link className={'nav-link'} to={'/'}>
                             {!isLoading && !user && (
                                 <>
-                                    <button
-                                        className="btn btn-dark"
-                                        onClick={loginWithRedirect}
-                                    >
+                                    <button className="btn btn-dark" onClick={loginWithRedirect}>
                                         Sign In
                                     </button>
                                 </>
@@ -55,15 +44,12 @@ function Navbar() {
                             {!isLoading && user && (
                                 <>
                                     <div>
-                                        <label className="mr-2">
-                                            {user.name}
-                                        </label>
+                                        <label className="mr-2">{user.name}</label>
                                         <button
                                             className="btn btn-dark"
                                             onClick={() =>
                                                 logout({
-                                                    returnTo:
-                                                        window.location.origin,
+                                                    returnTo: window.location.origin,
                                                 })
                                             }
                                         >
@@ -91,7 +77,7 @@ function Navbar() {
                 </ul>
             </div>
         </header>
-    )
+    );
 }
 
-export default withRouter(Navbar)
+export default withRouter(Navbar);
