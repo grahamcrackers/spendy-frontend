@@ -1,11 +1,11 @@
+import { Auth0Provider } from '@auth0/auth0-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { Auth0Provider } from '@auth0/auth0-react';
 import { BrowserRouter } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
+import { App } from './App';
 import { config } from './config';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <Auth0Provider
@@ -14,7 +14,7 @@ ReactDOM.render(
         redirectUri={window.location.origin}
         audience={config.auth0.audience}
         scope={config.auth0.scope}
-        useRefreshTokens={true}
+        // useRefreshTokens={true}
     >
         <BrowserRouter>
             <App />

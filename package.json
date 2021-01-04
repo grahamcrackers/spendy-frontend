@@ -18,6 +18,9 @@
     "dependencies": {
         "@auth0/auth0-react": "^1.2.0",
         "@auth0/auth0-spa-js": "^1.13.5",
+        "@graywolfai/react-heroicons": "^1.2.0",
+        "@headlessui/react": "^0.2.0",
+        "date-fns": "^2.16.1",
         "dotenv": "^8.2.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
@@ -34,6 +37,7 @@
         "@testing-library/jest-dom": "^5.11.6",
         "@testing-library/react": "^11.2.2",
         "@testing-library/user-event": "^12.6.0",
+        "@types/date-fns": "^2.6.0",
         "@types/jest": "^26.0.19",
         "@types/node": "^12.19.11",
         "@types/react": "^16.14.2",
